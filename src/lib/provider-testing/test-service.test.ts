@@ -104,16 +104,16 @@ describe("executeProviderTest", () => {
 
   test("codex SSE 事件流应识别 response.output_text.delta/done 并通过内容校验", async () => {
     const responseBody = [
-      'event: response.created',
+      "event: response.created",
       'data: {"type":"response.created","response":{"id":"resp_test","model":"gpt-5.4","status":"in_progress"}}',
       "",
-      'event: response.output_text.delta',
+      "event: response.output_text.delta",
       'data: {"type":"response.output_text.delta","delta":"pong"}',
       "",
-      'event: response.output_text.done',
+      "event: response.output_text.done",
       'data: {"type":"response.output_text.done","text":"pong"}',
       "",
-      'event: response.completed',
+      "event: response.completed",
       'data: {"type":"response.completed","response":{"id":"resp_test","model":"gpt-5.4","status":"completed"}}',
     ].join("\n");
 
